@@ -25,6 +25,7 @@ natural-thai/
 │   ├── context-and-tone.md          # การปรับภาษาและระดับความเป็นทางการตามบริบท
 │   ├── examples.md                  # ตัวอย่างคู่เทียบ ก่อน / หลัง แบบ AI vs แบบคนเขียน
 │   ├── loanwords-and-spelling.md    # ตารางคำทับศัพท์และหลักการเว้นวรรค
+│   ├── linguistic-research.md       # หลักภาษาศาสตร์ประยุกต์และงานวิจัย
 │   ├── ux-writing-and-microcopy.md  # การเขียนข้อความในระบบและปุ่มสั่งการ
 │   └── word-blacklist.md            # รายการคำและวลีที่ควรเลี่ยง
 ├── .agents/skills/natural-thai/      # โฟลเดอร์สำหรับ Google Antigravity
