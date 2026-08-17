@@ -22,12 +22,17 @@ Skill สำหรับ AI Coding Assistant และ Agent เพื่อใ�
 natural-thai/
 ├── SKILL.md                          # ไฟล์คำสั่งหลักสำหรับ Agent
 ├── references/                       # เอกสารอ้างอิงและคู่มือแบบละเอียด
-│   ├── context-and-tone.md          # การปรับภาษาและระดับความเป็นทางการตามบริบท
-│   ├── examples.md                  # ตัวอย่างคู่เทียบ ก่อน / หลัง แบบ AI vs แบบคนเขียน
-│   ├── loanwords-and-spelling.md    # ตารางคำทับศัพท์และหลักการเว้นวรรค
-│   ├── linguistic-research.md       # หลักภาษาศาสตร์ประยุกต์และงานวิจัย
-│   ├── ux-writing-and-microcopy.md  # การเขียนข้อความในระบบและปุ่มสั่งการ
-│   └── word-blacklist.md            # รายการคำและวลีที่ควรเลี่ยง
+│   ├── thai-grammar-fundamentals.md         # หลักไวยากรณ์ไทยพื้นฐานและการเรียงรูปประโยค
+│   ├── context-and-tone.md                  # การปรับระดับภาษา 5 ระดับตามบริบทและผู้รับสาร
+│   ├── loanwords-and-spelling.md            # ตารางคำทับศัพท์ คำยืม และการเว้นวรรค
+│   ├── ux-writing-and-microcopy.md          # การเขียนข้อความในระบบ ปุ่ม CTA และ Error Message
+│   ├── word-blacklist.md                    # รายการคำต้องห้าม คำที่สะกดผิดบ่อย และคำทดแทน
+│   ├── ux-ui-principles-and-heuristics.md   # กฎ 16 ข้อ (Laws of UX) และ Heuristics
+│   ├── career-and-job-application-guide.md  # คู่มือการสื่อสารสมัครงาน อีเมล HR และเรซูเม่
+│   ├── design-and-creative-guide.md         # คู่มือศัพท์และภาษาสำหรับสายงานออกแบบ
+│   ├── industry-and-profession-guide.md     # คู่มือ 7 กลุ่มสายอาชีพเฉพาะทาง
+│   ├── linguistic-research.md               # เทคนิคการเขียนและ Checklist ความเป็นมนุษย์
+│   └── examples.md                          # รวมตัวอย่าง Before / After ครบทุกสถานการณ์
 ├── .agents/skills/natural-thai/      # โฟลเดอร์สำหรับ Google Antigravity
 ├── README.md                         # เอกสารแนะนำโปรเจกต์
 ├── LICENSE                           # สัญญาอนุญาต (MIT)

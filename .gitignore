@@ -26,3 +26,25 @@ Thumbs.db
 *.tmp
 *.bak
 .cache/
+
+# Internal Testing & Evaluations
+eval/
+promptfoo_results/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+

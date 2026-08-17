@@ -31,7 +31,7 @@
 ### ใช้คำภาษาอังกฤษตรง ๆ
 ใช้กับคำศัพท์เทคนิคเฉพาะทาง คำสั่ง โค้ด หรือเครื่องมือที่คนทำงานคุ้นเคยในรูปภาษาอังกฤษมากกว่า หากพยายามแปลเป็นไทยจะทำให้เข้าใจยากหรือดูฝืนธรรมชาติ
 
-- ตัวอย่าง : config, bug, deploy, API, commit, push, pull, PR, branch, staging, production, refactor, backend, frontend, token, cache, endpoint, syntax, framework, terminal, repository
+- ตัวอย่าง : config, bug, deploy, API, commit, push, pull, PR, branch, staging, production, refactor, backend, frontend, token, cache, endpoint, syntax, framework, terminal, repository, sync, blocker, roadmap, standup, sprint, hotfix, backlog, ticket
 
 ### ใช้คำทับศัพท์ภาษาไทยที่ถูกต้อง
 ใช้กับคำที่คนไทยคุ้นเคยกับการออกเสียงและเขียนเป็นภาษาไทย และมีรูปคำทับศัพท์ที่ชัดเจนตามราชบัณฑิตยสภา
