@@ -26,6 +26,7 @@ Thumbs.db
 *.tmp
 *.bak
 .cache/
+scratch/
 
 # Internal Testing & Evaluations
 eval/
@@ -36,6 +37,10 @@ __pycache__/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Local Model Files
+Modelfile
+Modelfile.*
 
 # Virtual Environments
 .venv/

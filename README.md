@@ -21,21 +21,35 @@ Skill สำหรับ AI Coding Assistant และ Agent เพื่อใ�
 ```text
 natural-thai/
 ├── SKILL.md                          # ไฟล์คำสั่งหลักสำหรับ Agent
-├── references/                       # เอกสารอ้างอิงและคู่มือแบบละเอียด
+├── references/                              # เอกสารอ้างอิงและคู่มือแบบละเอียด 25 หมวด
 │   ├── thai-grammar-fundamentals.md         # หลักไวยากรณ์ไทยพื้นฐานและการเรียงรูปประโยค
 │   ├── context-and-tone.md                  # การปรับระดับภาษา 5 ระดับตามบริบทและผู้รับสาร
 │   ├── loanwords-and-spelling.md            # ตารางคำทับศัพท์ คำยืม และการเว้นวรรค
-│   ├── ux-writing-and-microcopy.md          # การเขียนข้อความในระบบ ปุ่ม CTA และ Error Message
 │   ├── word-blacklist.md                    # รายการคำต้องห้าม คำที่สะกดผิดบ่อย และคำทดแทน
+│   ├── ux-writing-and-microcopy.md          # การเขียนข้อความในระบบ ปุ่ม CTA และ Error Message
 │   ├── ux-ui-principles-and-heuristics.md   # กฎ 16 ข้อ (Laws of UX) และ Heuristics
-│   ├── career-and-job-application-guide.md  # คู่มือการสื่อสารสมัครงาน อีเมล HR และเรซูเม่
 │   ├── design-and-creative-guide.md         # คู่มือศัพท์และภาษาสำหรับสายงานออกแบบ
-│   ├── industry-and-profession-guide.md     # คู่มือ 7 กลุ่มสายอาชีพเฉพาะทาง
+│   ├── industry-and-profession-guide.md     # คู่มือ 8 กลุ่มสาขาวิชาชีพเฉพาะทาง
+│   ├── career-and-job-application-guide.md  # คู่มือการสื่อสารสมัครงาน อีเมล HR และเรซูเม่
+│   ├── corporate-tact-and-managing-up.md    # การสื่อสารในองค์กรและการบริหารเจ้านาย
+│   ├── sociolinguistics-and-generations.md  # ภาษาศาสตร์สังคมและการสื่อสาร 4 เจเนอเรชัน
+│   ├── thai-humor-and-banter-guide.md       # คู่มืออารมณ์ขันไทยและการหยอกล้ออย่างสร้างสรรค์
+│   ├── chat-and-messaging-cadence.md        # จังหวะการแชท (LINE, Slack, Discord)
+│   ├── social-commerce-and-live-chat.md     # การตอบแชทขายของและการบริการลูกค้า
+│   ├── screenplay-and-natural-dialogue.md   # บทสนทนาที่มีชีวิตและงานวรรณกรรม
+│   ├── academic-and-scientific-prose.md     # ภาษาเชิงวิชาการและการเขียนบทคัดย่อ
+│   ├── financial-and-data-standards.md      # มาตรฐานภาษาการเงินและข้อมูลตัวเลข
+│   ├── crisis-communication.md              # การสื่อสารในภาวะวิกฤตและแถลงการณ์
+│   ├── cross-cultural-communication.md      # การสื่อสารข้ามวัฒนธรรม
+│   ├── accessibility-and-screen-reader.md   # ภาษาสำหรับการเข้าถึงและ Screen Reader
+│   ├── mental-health-boundaries.md          # การให้กำลังใจและขอบเขตสุขภาพจิต
+│   ├── multi-turn-continuity.md             # การรักษาความต่อเนื่องในบทสนทนายาว
+│   ├── adversarial-benchmark-and-eval.md    # โจทย์ทดสอบความสมจริงของภาษา 10 หมวด
 │   ├── linguistic-research.md               # เทคนิคการเขียนและ Checklist ความเป็นมนุษย์
 │   └── examples.md                          # รวมตัวอย่าง Before / After ครบทุกสถานการณ์
-├── .agents/skills/natural-thai/      # โฟลเดอร์สำหรับ Google Antigravity
-├── README.md                         # เอกสารแนะนำโปรเจกต์
-├── LICENSE                           # สัญญาอนุญาต (MIT)
+├── .agents/skills/natural-thai/             # โฟลเดอร์สำหรับ Google Antigravity
+├── README.md                                # เอกสารแนะนำโปรเจกต์
+├── LICENSE                                  # สัญญาอนุญาต (MIT)
 └── .gitignore
 ```
 
