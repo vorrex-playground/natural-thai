@@ -2,27 +2,29 @@
 
 Skill สำหรับ AI Coding Assistant และ Agent เพื่อให้เขียนและตอบเป็นภาษาไทยที่เป็นธรรมชาติ อ่านเข้าใจง่าย สื่อสารเหมือนคนทำงานจริง ๆ คุยกัน โดยไม่ใช้สำนวนแข็งทื่อหรือโครงสร้างประโยคแปลตรงตัวแบบ AI
 
-โปรเจกต์นี้สร้างขึ้นตามมาตรฐาน **Agent Skills Open Standard** (agentskills.io) ใช้งานได้กับ Google Antigravity, Claude Code, GitHub Copilot, Cursor, Cline รวมถึง LLMs ทั่วไปอย่าง ChatGPT, Claude.ai และ Gemini *(อยู่ระหว่างการพัฒนา)*
+โปรเจกต์นี้สร้างขึ้นตามมาตรฐาน **Agent Skills Open Standard** (agentskills.io) เป็น Standalone Skill สากลที่ใช้งานได้กับ Claude Code, GitHub Copilot, Cursor, Windsurf, Cline, Google Antigravity รวมถึง LLMs ทั่วไปอย่าง ChatGPT, Claude.ai และ Gemini *(อยู่ระหว่างการพัฒนา)*
 
 ---
 
 ## จุดเด่น
 
 - **ภาษาเป็นธรรมชาติ :** ตัดโครงสร้างประโยคแปลอังกฤษตรงตัว ประโยคกรรมที่ฝืนธรรมชาติ ("ถูก...") และคำเชื่อมทางการซ้ำซาก
-- **ปรับระดับภาษาตามบริบท (Adaptive Tone) :** ปรับระดับภาษาให้เข้ากับผู้รับสาร ทั้งการคุยกับหัวหน้า ลูกค้า เพื่อนร่วมงาน หรือคนทั่วไป
+- **ไม่เพี้ยนความหมาย (Zero Semantic Drift) :** ล็อกหมุดความหมาย 6 ประการ เพื่อคงเงื่อนไข ข้อยกเว้น ขอบเขต และภาระหน้าที่ไว้ครบ 100%
+- **ปรับระดับภาษาตามบริบท (Adaptive Tone) :** ปรับระดับภาษา 5 ระดับให้เข้ากับผู้รับสาร ทั้งการคุยกับหัวหน้า ลูกค้า เพื่อนร่วมงาน หรือคนทั่วไป
 - **คำทับศัพท์และการเว้นวรรคที่ถูกต้อง :** ยึดตามหลักเกณฑ์ราชบัณฑิตยสภา (เช่น เช็ก, อัปเดต, โปรเจกต์, เซิร์ฟเวอร์, ลิงก์) พร้อมเว้นวรรคระหว่างภาษาไทย ภาษาอังกฤษ ตัวเลข และไม้ยมก (ๆ) ให้อ่านสบายตา
-- **ครอบคลุมงานเทคนิคและ UX Writing :** มีแนวทางการอธิบายเรื่องเทคนิค การแจ้งเตือนข้อผิดพลาด (Error Message) และข้อความบนหน้าจอระบบ (Microcopy)
+- **ครอบคลุม 26 หมวดหมู่วิชาชีพ :** ทั้งงานเทคนิค, UX Writing, กฎหมาย, การเงิน, การแพทย์, HR, การตลาด, ดีไซน์, บทสนทนา, ภาวะวิกฤต และสุขภาพจิต
 - **โหลดเร็ว ไม่กิน token (Progressive Disclosure) :** แยกเนื้อหารายละเอียดไว้ในโฟลเดอร์ `references/` ทำให้ AI อ่านเฉพาะส่วนที่จำเป็นต้องใช้
 
 ---
 
-## โครงสร้างไฟล์
+## โครงสร้างไฟล์ (Universal Skill Structure)
 
 ```text
 natural-thai/
-├── SKILL.md                          # ไฟล์คำสั่งหลักสำหรับ Agent
-├── references/                              # เอกสารอ้างอิงและคู่มือแบบละเอียด 25 หมวด
+├── SKILL.md                                 # ไฟล์คำสั่งหลักสำหรับ Agent (YAML Frontmatter + Core Directives)
+├── references/                              # เอกสารคู่มืออ้างอิงเชิงลึก 26 หมวดหมู่
 │   ├── thai-grammar-fundamentals.md         # หลักไวยากรณ์ไทยพื้นฐานและการเรียงรูปประโยค
+│   ├── structure-and-meaning-preservation.md # กฎเหล็กการรักษาแก่นความหมาย 6 ประการ ป้องกัน Semantic Drift
 │   ├── context-and-tone.md                  # การปรับระดับภาษา 5 ระดับตามบริบทและผู้รับสาร
 │   ├── loanwords-and-spelling.md            # ตารางคำทับศัพท์ คำยืม และการเว้นวรรค
 │   ├── word-blacklist.md                    # รายการคำต้องห้าม คำที่สะกดผิดบ่อย และคำทดแทน
@@ -47,56 +49,32 @@ natural-thai/
 │   ├── adversarial-benchmark-and-eval.md    # โจทย์ทดสอบความสมจริงของภาษา 10 หมวด
 │   ├── linguistic-research.md               # เทคนิคการเขียนและ Checklist ความเป็นมนุษย์
 │   └── examples.md                          # รวมตัวอย่าง Before / After ครบทุกสถานการณ์
-├── .agents/skills/natural-thai/             # โฟลเดอร์สำหรับ Google Antigravity
-├── README.md                                # เอกสารแนะนำโปรเจกต์
+├── README.md                                # เอกสารแนะนำโปรเจกต์และวิธีติดตั้ง
 ├── LICENSE                                  # สัญญาอนุญาต (MIT)
-└── .gitignore
+└── .gitignore                               # ละเว้นไฟล์ระบบและการทดสอบภายใน
 ```
 
 ---
 
-## วิธีติดตั้งและใช้งาน
+## วิธีติดตั้งและใช้งาน (Universal Installation)
 
-### 1. Google Antigravity (AGY)
-
-#### ติดตั้งเฉพาะโปรเจกต์ (Workspace Level)
-นำโฟลเดอร์ `natural-thai` ไปวางไว้ในโฟลเดอร์ `.agents/skills/` ที่ root ของโปรเจกต์ :
-
-```bash
-# อยู่ที่ root ของโปรเจกต์คุณ
-mkdir -p .agents/skills
-git clone https://github.com/vorrex-playground/natural-thai.git .agents/skills/natural-thai
-```
-
-#### ติดตั้งแบบใช้งานได้ทุกโปรเจกต์ (Global Level)
-นำไปวางไว้ที่โฟลเดอร์การตั้งค่าหลักของเครื่อง :
-
-- **Windows :** `%USERPROFILE%\.gemini\config\skills\natural-thai\`
-- **macOS / Linux :** `~/.gemini/config/skills/natural-thai/`
-
-```bash
-git clone https://github.com/vorrex-playground/natural-thai.git ~/.gemini/config/skills/natural-thai
-```
-
----
-
-### 2. Claude Code
+### 1. Claude Code
 
 นำโฟลเดอร์ `natural-thai` ไปวางไว้ในโฟลเดอร์ `.claude/skills/` :
 
 ```bash
-# ใช้งานเฉพาะโปรเจกต์
+# ติดตั้งเฉพาะโปรเจกต์
 mkdir -p .claude/skills
 git clone https://github.com/vorrex-playground/natural-thai.git .claude/skills/natural-thai
 
-# หรือใช้งานทุกโปรเจกต์
+# หรือติดตั้งใช้งานทุกโปรเจกต์ในเครื่อง
 mkdir -p ~/.claude/skills
 git clone https://github.com/vorrex-playground/natural-thai.git ~/.claude/skills/natural-thai
 ```
 
 ---
 
-### 3. GitHub Copilot
+### 2. GitHub Copilot
 
 นำโฟลเดอร์ `natural-thai` ไปวางไว้ในโฟลเดอร์ `.github/skills/` ของ repository :
 
@@ -107,15 +85,38 @@ git clone https://github.com/vorrex-playground/natural-thai.git .github/skills/n
 
 ---
 
-### 4. Cursor / Windsurf / Cline / Roo Code
+### 3. Cursor / Windsurf / Cline / Roo Code
 
 สามารถคัดลอกไฟล์ `SKILL.md` และโฟลเดอร์ `references/` ไปวางไว้ในโฟลเดอร์ Rules หรือ Skills ของโปรเจกต์ (เช่น `.cursor/rules/` หรือ `skills/natural-thai/`) หรือใส่ข้อความกำกับใน System Prompt ได้ทันที
+
+```bash
+mkdir -p skills
+git clone https://github.com/vorrex-playground/natural-thai.git skills/natural-thai
+```
+
+---
+
+### 4. Google Antigravity (AGY)
+
+นำโฟลเดอร์ `natural-thai` ไปวางไว้ในโฟลเดอร์ `.agents/skills/` ของโปรเจกต์ หรือในโฟลเดอร์คอนฟิกหลักของเครื่อง :
+
+```bash
+# ติดตั้งเฉพาะโปรเจกต์
+mkdir -p .agents/skills
+git clone https://github.com/vorrex-playground/natural-thai.git .agents/skills/natural-thai
+
+# ติดตั้งระดับเครื่อง (Global Level)
+# Windows:
+git clone https://github.com/vorrex-playground/natural-thai.git %USERPROFILE%\.gemini\config\skills\natural-thai
+# macOS / Linux:
+git clone https://github.com/vorrex-playground/natural-thai.git ~/.gemini/config/skills/natural-thai
+```
 
 ---
 
 ### 5. ChatGPT / Claude.ai / Gemini (Web UI & LLMs ทั่วไป)
 
-สามารถนำคำสั่งไปใช้งานกับ AI ทั่วไปได้ง่าย ๆ 2 วิธี :
+สามารถนำคำสั่งไปใช้งานกับ AI ทั่วไปได้ง่าย ๆ :
 - **Custom Instructions / System Prompt :** คัดลอกข้อความในไฟล์ `SKILL.md` ไปใส่ในช่อง Custom Instructions ของบัญชี
 - **Projects / Gems / Knowledge Base :** อัปโหลดไฟล์ `SKILL.md` และไฟล์ในโฟลเดอร์ `references/` เข้าไปเป็นความรู้ประจำโปรเจกต์
 
